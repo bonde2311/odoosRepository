@@ -60,6 +60,19 @@
             </kanban>
         </field>
     </record>
-
+    
+  <!-- Search View -->
+    <record id="laptop_view_search" model="ir.ui.view">
+        <field name="name">laptop.view.search</field>
+        <field name="model">laptop</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <filter string="Draft" name="filter_draft" domain="[('state','=','draft')]"/>
+                <filter string="Confirmed" name="filter_confirmed" domain="[('state','=','confirmed')]"/>
+                <filter string="Done" name="filter_done" domain="[('state','=','done')]"/>
+            </search>
+        </field>
+    </record>̥
  
 </odoo>
