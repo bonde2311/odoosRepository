@@ -43,37 +43,7 @@
         </field>
     </record>
 
-    <!-- Kanban View -->
-    <record id="computer_view_kanban" model="ir.ui.view">
-        <field name="name">computer.view.kanban</field>
-        <field name="model">computer</field>
-        <field name="arch" type="xml">
-            <kanban>
-                <field name="state"/>
-                <templates>
-                    <t t-name="kanban-box">
-                        <div class="oe_kanban_global_click">
-                            <field name="name"/>
-                        </div>
-                    </t>
-                </templates>
-            </kanban>
-        </field>
-    </record>
 
-    <!-- Search View -->
-    <record id="computer_view_search" model="ir.ui.view">
-        <field name="name">computer.view.search</field>
-        <field name="model">computer</field>
-        <field name="arch" type="xml">
-            <search>
-                <field name="name"/>
-                <filter string="Draft" name="filter_draft" domain="[('state','=','draft')]"/>
-                <filter string="Confirmed" name="filter_confirmed" domain="[('state','=','confirmed')]"/>
-                <filter string="Done" name="filter_done" domain="[('state','=','done')]"/>
-            </search>
-        </field>
-    </record>
     <!-- Action -->
     <record id="computer_action" model="ir.actions.act_window">
         <field name="name">Samples</field>

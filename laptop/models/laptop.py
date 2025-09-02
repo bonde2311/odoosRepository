@@ -17,20 +17,3 @@ class Laptop(models.Model):
         ('done', 'Done')
     ], string='State', default='draft', tracking=True)
     
-    def button_action(self):
-        pass
-    
-    @api.model_create_multi
-    def create(self, vals):
-        """Create records using provided values."""
-        res = super().create(vals)
-        return res
-    
-    def write(self, vals):
-        """Write records using provided values."""
-        res = super().write(vals)
-        return res
-    
-    def unlink(self):
-        """Delete records"""
-        return super().unlink()
