@@ -16,4 +16,40 @@ class Computer(models.Model):
         ('confirmed', 'Confirmed'),
         ('done', 'Done')
     ], string='State', default='draft', tracking=True)
+
+
+# this is addedd in branch code multiples fields smae 
+
+    name = fields.Char(string='Name', required=True)
+    description = fields.Text(string='Description')
+    date = fields.Date(string='Date')
+    active = fields.Boolean(string='Active', default=True)
+    state = fields.Selection([
+        ('draft', 'Draft'),
+        ('confirmed', 'Confirmed'),
+        ('done', 'Done')
+    ], string='State', default='draft', tracking=True)
+
+
+    name = fields.Char(string='Name', required=True)
+    description = fields.Text(string='Description')
+    date = fields.Date(string='Date')
+    active = fields.Boolean(string='Active', default=True)
+    state = fields.Selection([
+        ('draft', 'Draft'),
+        ('confirmed', 'Confirmed'),
+        ('done', 'Done')
+    ], string='State', default='draft', tracking=True)
+
+
+    name = fields.Char(string='Name', required=True)
+    description = fields.Text(string='Description')
+    date = fields.Date(string='Date')
+    active = fields.Boolean(string='Active', default=True)
+    state = fields.Selection([
+        ('draft', 'Draft'),
+        ('confirmed', 'Confirmed'),
+        ('done', 'Done')
+    ], string='State', default='draft', tracking=True)
+
     
